@@ -1,0 +1,36 @@
+# schema {
+# 	query : Query
+# 	mutation : Mutation
+# }
+
+# type Query {
+# 	userRead : [User]
+# 	userLogin(form: LoginForm): String
+# 	userCheck: User
+# }
+
+# type Mutation {
+# 	userRegister(form: UserForm): User
+# 	userUpdate(id: Int!, form: UserForm): Boolean
+# 	userDelete(id: Int!): Boolean
+# }
+
+# type User {
+# 	id : Int
+# 	username : String
+# 	email: String
+# 	role: String
+# 	password: String
+# }
+
+# input UserForm {
+# 	username : String
+# 	email: String
+# 	role: String
+# 	password: String
+# }
+
+# input LoginForm {
+# 	username : String
+# 	password : String
+# }
