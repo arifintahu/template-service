@@ -1,28 +1,18 @@
-import { startServer } from './server';
-// import { syncDB } from './schemas/orm';
-import * as path from 'path';
-import * as dotenv from 'dotenv';
+import * as express from 'express';
+import loaders from './loaders';
+import { createServer } from 'http';
+import { Server } from 'net';
 
-async function startApp() {
-	await loadEnv();
-	// await syncDB();
-	startServer();
-}
+export async function startServer(): Promise<Server> {
+	const app = express();
+	await loaders(app);
 
-function loadEnv() {
-	return new Promise((resolve, reject) => {
-		try {
-			const PATH_CONFIG = path.join(__dirname,`../config/.env.dev`);
-			console.log(PATH_CONFIG);
-			dotenv.config({
-				path: PATH_CONFIG
-			});
-			resolve();
-		} catch (e) {
-			reject(e);
-			console.log(e);
-		}
+	app.set('port', process.env.PORT);
+	const http_server = createServer(app);
+
+	return http_server.listen(process.env.PORT, () => {
+		console.log('Server is listening on port ', process.env.PORT);
 	});
 }
 
-startApp();
+startServer();

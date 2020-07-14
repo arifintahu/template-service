@@ -1,5 +1,5 @@
-// import user from `./user.model`;
+import { User } from './user';
 
-// export default {
-// 	user
-// }
+export default {
+	User
+}

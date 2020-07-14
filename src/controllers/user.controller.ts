@@ -1,6 +1,21 @@
-// import { userRegistration, userVerification, readUserById, 
-//     readUserByName, updateUser, deleteUser, } from "../models/index";
-// import { Request, Response } from "express";
+import services from '../services';
+import { Request, Response } from 'express';
+
+const { user } = services;
+
+export default {
+	userFindController: async (req: Request, res: Response) => {
+		const result = await user.userFind();
+		if(result.length){
+			res.send(result)
+		}else{
+			res.status(400).json({ 
+                ok : false,
+                msg : 'null' 
+            });
+		}
+	}
+}
 
 // //User
 // export async function registration(req: Request, res: Response){
