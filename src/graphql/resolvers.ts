@@ -1,11 +1,12 @@
-// import { 
-// 	userRead, 
-// 	userRegister,
-// 	userLogin,
-// 	userUpdate,
-// 	userDelete,
-// 	userCheck  
-// } from './resolvers/user.resolver';
+import { 
+	userFind, 
+} from './resolvers/user.resolver';
+
+export const resolvers = {
+	Query : {
+		userFind
+	}
+};
 
 // export const resolvers = {
 // 	Query : {

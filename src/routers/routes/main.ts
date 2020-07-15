@@ -1,8 +1,7 @@
 import { Router } from 'express';
-import controllers from '../../controllers'; 
+import { userController } from '../../controllers'; 
 
 const route = Router();
-const { userController } = controllers;
 
 route.get('/', (req, res) => {
 	res.status(200).end();

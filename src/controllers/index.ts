@@ -1,5 +1,5 @@
 import userController from './user.controller';
 
-export default {
+export {
 	userController
 }

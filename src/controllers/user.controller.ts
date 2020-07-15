@@ -1,14 +1,12 @@
-import services from '../services';
+import { user } from '../services';
 import { Request, Response } from 'express';
-
-const { user } = services;
 
 export default {
 	userFindController: async (req: Request, res: Response) => {
 		const result = await user.userFind();
 		if(result.length){
 			res.send(result)
-		}else{
+		} else {
 			res.status(400).json({ 
                 ok : false,
                 msg : 'null' 

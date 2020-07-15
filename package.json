@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node dist/index.js",
     "start-watch": "nodemon --delay 1000ms dist/index.js",
-    "build-watch2": "tsc -w && ncp src/graphql/schema dist/graphql/schema",
+    "build-watch2": "tsc -w && ncp src/graphql/schemas dist/graphql/schemas",
     "build-watch": "tsc -w",
-    "build2": "tsc && ncp src/graphql/schema dist/graphql/schema",
+    "build2": "tsc && ncp src/graphql/schemas dist/graphql/schemas",
     "build": "tsc"
   },
   "devDependencies": {

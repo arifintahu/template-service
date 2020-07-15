@@ -1,3 +1,19 @@
+schema {
+	query : Query
+}
+
+type Query {
+	userFind : [User]
+}
+
+type User {
+	id : Int
+	username : String
+	email: String
+	id_role: Int
+	password: String
+}
+
 # schema {
 # 	query : Query
 # 	mutation : Mutation

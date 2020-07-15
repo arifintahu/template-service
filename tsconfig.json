@@ -5,6 +5,7 @@
     "target": "es2017",
     "rootDir": "./src",
     "outDir": "./dist",
+    "esModuleInterop": true,
     "typeRoots": [
       "node_modules/@types",
       "src/@types"

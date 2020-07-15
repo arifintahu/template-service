@@ -1,6 +1,6 @@
-import * as bodyParser from 'body-parser'; 
-import * as compression from 'compression';
-import * as cors from 'cors';
+import bodyParser from 'body-parser'; 
+import compression from 'compression';
+import cors from 'cors';
 import routers from '../routers';
 
 export default function loadExpress(app) {

@@ -1,17 +1,11 @@
 // import { User } from '../../schemas/orm';
-// import { checkAuthentication } from './utils/auth';
+import { checkAuthentication } from './utils/auth';
+import { user } from '../../services';
 
-// import { 
-// 	userRegistration, 
-// 	userVerification,
-// 	updateUser,
-// 	deleteUser 
-// } from '../../models/user';
-
-// export async function userRegister(root, { form }, ctx) {
-// 	const result = await userRegistration(form);
-// 	return result;
-// }
+export async function userFind(root, args, ctx) {
+	const result = await user.userFind();
+	return result;
+}
 
 // export async function userLogin(root, { form }, ctx) {
 // 	const result = await userVerification(form);

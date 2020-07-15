@@ -1,5 +1,5 @@
 import user from './user.service';
 
-export default {
+export {
 	user
 }
