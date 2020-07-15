@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import routes from './routes';
+import { main } from './routes';
 
 const app = Router();
-app.use('/', routes.main);
+app.use('/', main);
 
 export default app;
