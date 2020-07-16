@@ -1,6 +1,9 @@
 import redis from 'redis'; 
 
-export const client = redis.createClient();
+export const client = redis.createClient({
+	host: process.env["REDIS_HOST"] || '127.0.0.1',
+	port: parseInt(process.env["REDIS_PORT"], 10) || 6379,
+});
 
 export default function loadRedis() {
 	return new Promise((resolve, reject) => {
