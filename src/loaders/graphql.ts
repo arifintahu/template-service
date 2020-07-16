@@ -1,5 +1,5 @@
-import * as fs from 'fs';
-import * as path from 'path';
+import fs from 'fs';
+import path from 'path';
 import { ApolloServer, gql } from 'apollo-server-express';
 
 import { resolvers } from '../graphql/resolvers';
