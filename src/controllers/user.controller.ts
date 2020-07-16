@@ -4,7 +4,7 @@ import { Request, Response } from 'express';
 export default {
 	userFindController: async (req: Request, res: Response) => {
 		const result = await user.userFind();
-		if(result.length){
+		if(result){
 			res.send(result)
 		} else {
 			res.status(400).json({ 
